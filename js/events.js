@@ -6,14 +6,14 @@ function getIt() {
 }
 
 function frameIt() {
-  $(`img`).on("load", function(e) {
+  $(`img`).on("load", function() {
     this.addClass(`.tasty`)
   })
 }
 
 function pressIt() {
   $(document).on("keydown", function(e) {
-    if (e.which == 71) {
+    if (this.which == 71) {
       alert("G pressed!")
     }
   })
